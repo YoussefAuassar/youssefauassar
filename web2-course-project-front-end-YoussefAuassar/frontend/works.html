@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'ART CACHÉ | WORKS</title>
+    <!-- CSS is linked -->
+    <link rel="stylesheet" href="works.css">
+
+    <script src="auth.js" defer></script>
+
+    <script src="works.js"></script>
+    
+    <!-- Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/mru2fvr.css">
+
+</head>
+<body>
+
+     <!-- Setting background image on the homepage -->
+     <div class="home-background"></div>
+
+    <!-- Header -->
+    <header>
+
+    <!-- Navigatie  -->
+    <nav>
+        <li><a href="/web2-course-project-front-end-YoussefAuassar/frontend/home.html">L'ART CACHÉ.</a></li>
+        <li class="about"><a href="/web2-course-project-front-end-YoussefAuassar/frontend/saved.html">SAVED</a></li>
+        <li><a href="">WORKS</a></li>
+
+        <!-- Account icon  -->
+        <li><a id="accountLink" href="/web2-course-project-front-end-YoussefAuassar/frontend/login.html"><svg viewBox="0 0 35.575 35.575">
+            <path d="M17.788.563A17.788,17.788,0,1,0,35.575,18.35,17.785,17.785,0,0,0,17.788.563Zm0,6.886a6.312,6.312,0,1,1-6.312,6.312A6.312,6.312,0,0,1,17.788,7.448Zm0,24.673A13.744,13.744,0,0,1,7.28,27.23a8,8,0,0,1,7.065-4.289,1.755,1.755,0,0,1,.509.079,9.5,9.5,0,0,0,2.934.495,9.46,9.46,0,0,0,2.934-.495,1.755,1.755,0,0,1,.509-.079A8,8,0,0,1,28.3,27.23,13.744,13.744,0,0,1,17.788,32.121Z"/>
+        </svg></a>
+        </li>
+    </nav>
+
+    </header>
+
+    <!-- Main Section -->
+    <section>
+        <!-- Works Article -->
+        <article class="works">
+            <h2>Works</h2>
+        </article>
+
+        <!-- Search Bar -->
+        <aside class="searchbar">
+            <form id="searchForm">
+                <input type="search" id="searchInput" name="search" placeholder="Genre, Artist, Location..." />
+                <button type="submit">Search</button>
+            </form>
+        </aside>
+    </section>
+
+    <main>
+ 
+
+    <div class="filter">
+
+        <!-- Style/Genre Filters -->
+        <div class="filter-group">
+            <h2>Style/Genre</h2>
+            <label>
+                <input type="checkbox" id="filter-all" class="filter-checkbox" data-filter="all" checked>
+                <span>All</span>
+            </label>
+            <label>
+                <input type="checkbox" id="filter-graffiti" class="filter-checkbox" data-filter="graffiti">
+                <span>Graffiti</span>
+            </label>
+            <label>
+                <input type="checkbox" id="filter-mural" class="filter-checkbox" data-filter="mural">
+                <span>Mural</span>
+            </label>
+            <label>
+                <input type="checkbox" id="filter-calligraphy" class="filter-checkbox" data-filter="calligraphy">
+                <span>Calligraphy</span>
+            </label>
+        </div>
+    
+        <!-- Location Filters -->
+        <div class="filter-group">
+            <h2>Location</h2>
+            <label>
+                <input type="checkbox" id="location-Annessens" name="location" value="Annessens" checked>
+                <span>Anneessens</span>
+            </label>
+            <label>
+                <input type="checkbox" id="location-Beurs" name="location" value="Beurs">
+                <span>Beurs</span>
+            </label>
+            <label>
+                <input type="checkbox" id="location-Rue-de-Namur" name="location" value="Rue de Namur">
+                <span>Rue de Namur</span>
+            </label>
+            <label>
+                <input type="checkbox" id="location-Quai-des-materiaux" name="location" value="Quai des materaux">
+                <span>Quai des Matériaux</span>
+            </label>
+        </div>
+    
+        <!-- Date Filters -->
+        <div class="filter-group">
+            <h2>Date</h2>
+            <label>
+                <input type="checkbox" id="date-2013" name="date" value="2013">
+                <span>2013</span>
+            </label>
+            <label>
+                <input type="checkbox" id="date-2014" name="date" value="2014">
+                <span>2014</span>
+            </label>
+            <label>
+                <input type="checkbox" id="date-2015" name="date" value="2015">
+                <span>2015</span>
+            </label>
+        </div>
+    
+    </div>
+
+    <article>
+        <div class="article_content_wrapper">
+            <div id="streetArtContainer" class="street-art-container"></div>
+        </div>
+    </article>
+
+</main>
+
+</body>
+</html>

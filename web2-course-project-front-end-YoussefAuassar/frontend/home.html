@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>L'ART CACHÉ | HOME</title>
+		<!-- CSS is linked -->
+		<link rel="stylesheet" href="home.css" />
+
+		<script src="auth.js" defer></script>
+		<script src="home.js" defer></script>
+		<!-- Font -->
+		<link rel="stylesheet" href="https://use.typekit.net/mru2fvr.css" />
+
+		<link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet"/>
+		<script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+	</head>
+	<body>
+		<div class="home-container">
+			<!-- Setting background image on the homepage -->
+
+			<div class="home-background"></div>
+
+			<!-- Header -->
+			<header>
+				<!-- Navigatie -->
+				<nav>
+					<li><a href="">L'ART CACHÉ.</a></li>
+					<li class="about">
+						<a
+							href="/web2-course-project-front-end-YoussefAuassar/frontend/saved.html"
+							>SAVED</a
+						>
+					</li>
+					<li>
+						<a
+							href="/web2-course-project-front-end-YoussefAuassar/frontend/works.html"
+							>WORKS</a
+						>
+					</li>
+
+					<!-- Account icon or user's name -->
+					<li id="accountItem">
+						<a
+							id="accountLink"
+							href="/web2-course-project-front-end-YoussefAuassar/frontend/login.html"
+						>
+							<svg viewBox="0 0 35.575 35.575">
+								<path
+									d="M17.788,0.563A17.788,17.788,0,1,0,35.575,18.35,17.785,17.785,0,0,0,17.788,0.563Zm0,6.886a6.312,6.312,0,1,1-6.312,6.312A6.312,6.312,0,0,1,17.788,7.448Zm0,24.673A13.744,13.744,0,0,1,7.28,27.23a8,8,0,0,1,7.065-4.289,1.755,1.755,0,0,1,.509.079,9.5,9.5,0,0,0,2.934.495,9.46,9.46,0,0,0,2.934-.495,1.755,1.755,0,0,1,.509-.079A8,8,0,0,1,28.3,27.23,13.744,13.744,0,0,1,17.788,32.121Z"
+								/>
+							</svg>
+						</a>
+					</li>
+				</nav>
+			</header>
+
+			<div class="wrapper">
+				<!-- Existing section with images -->
+				<section>
+					<div class="parent-1">
+						<img
+							class="image-1"
+							src="../frontend/images/home-glasses.jpg.png"
+							alt="Main Image 1"
+						/>
+						<img
+							class="overlay-image-1"
+							src="../frontend/images/home-smiley.png"
+							alt="Overlay Image 1"
+						/>
+						<img class="text-1" src="../frontend/images/street.png" alt="" />
+					</div>
+
+					<div class="parent-2">
+						<img
+							class="image-2"
+							src="../frontend/images/home-dino.jpg"
+							alt="Main Image 2"
+						/>
+						<img
+							class="overlay-image-2"
+							src="../frontend/images/home-cross.png"
+							alt="Overlay Image 2"
+						/>
+						<div class="text-2">Art</div>
+					</div>
+
+					<div class="parent-3">
+						<img
+							class="image-3"
+							src="../frontend/images/home-mannekenpis.jpg.png"
+							alt="Main Image 3"
+						/>
+						<img
+							class="overlay-image-3"
+							src="../frontend/images/home-lines.png"
+							alt="Overlay Image 3"
+						/>
+						<img class="text-3" src="../frontend/images/brussels.png" alt="" />
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="arrow">
+						<img src="../frontend/images/home-arrow.png" alt="" />
+					</div>
+				</div>
+			</div>
+
+			<div class="w">
+
+			<div style="width: 800px; height: 450px;" id="map"></div>
+			<img class="mapstreet" src="../frontend/images/mapstreet.png" alt="">
+		</div>
+		</div>
+
+	</body>
+</html>

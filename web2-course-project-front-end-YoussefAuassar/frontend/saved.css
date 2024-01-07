@@ -1,0 +1,126 @@
+/* Reset some default styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Background styling for the homepage */
+.home-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../frontend/images/works-background.png);
+	background-size: cover;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	width: 100%;
+	height: 240vh;
+	z-index: -1;
+}
+
+/* Header styling */
+header {
+	background-color: #000000;
+	padding: 10px;
+	text-align: center;
+	font-family: "subway-berlin-sc", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Navigation styling */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+nav li {
+	list-style: none;
+	margin: 15px 0px 15px 0px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 4px;
+}
+
+nav svg {
+	width: 30px;
+	height: 30px;
+	fill: #fff;
+}
+
+/* Adjusting the 'about' link position */
+header nav li.about {
+	margin-left: 200px;
+}
+
+/* Main Section styling */
+section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+/* Works Article styling */
+.works h2 {
+	color: white;
+	font-family: "subway-berlin-sc", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 100px;
+	letter-spacing: 4px;
+	margin-top: 20px;
+}
+
+.saved-artwork-container {
+	position: relative;
+	width: 300px; /* Set a fixed width for the container */
+	max-width: 100%;
+	overflow: hidden;
+	float: left; /* Add this property to align containers side by side */
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+.saved-artwork-container img {
+	width: 300px;
+	height: 250px;
+}
+
+.saved-artwork-container h4 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	color: white;
+	background-color: black;
+	padding: 10px;
+	text-align: center;
+	font-size: 20px;
+	font-family: "Courier New", Courier, monospace;
+}
+
+main {
+	max-width: 1200px;
+	justify-content: space-between;
+	align-items: center;
+
+	margin: 0 auto;
+}
+
+#savedArtworksContainer {
+	margin-top: 100px;
+}

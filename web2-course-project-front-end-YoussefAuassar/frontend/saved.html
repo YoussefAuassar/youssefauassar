@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'ART CACHÉ | SAVED</title>
+    <!-- CSS is linked -->
+    <link rel="stylesheet" href="saved.css">
+
+    <!-- Javscript is linked -->
+    <script src="auth.js" defer></script>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/mru2fvr.css">
+</head>
+<body>
+     <!-- Setting background image on the homepage -->
+     <div class="home-background"></div>
+ 
+    <!-- Header -->
+    <header>
+
+    <!-- Navigatie  -->
+    <nav>
+        <li><a href="/web2-course-project-front-end-YoussefAuassar/frontend/home.html">L'ART CACHÉ.</a></li>
+        <li class="about"><a href="/web2-course-project-front-end-YoussefAuassar/frontend/saved.html">SAVED</a></li>
+        <li><a href="/web2-course-project-front-end-YoussefAuassar/frontend/works.html">WORKS</a></li>
+
+        <li><a id="accountLink" href="/web2-course-project-front-end-YoussefAuassar/frontend/login.html"><svg viewBox="0 0 35.575 35.575">
+            <path d="M17.788,.563A17.788,17.788,0,1,0,35.575,18.35,17.785,17.785,0,0,0,17.788,.563Zm0,6.886a6.312,6.312,0,1,1-6.312,6.312A6.312,6.312,0,0,1,17.788,7.448Zm0,24.673A13.744,13.744,0,0,1,7.28,27.23a8,8,0,0,1,7.065-4.289,1.755,1.755,0,0,1,.509.079,9.5,9.5,0,0,0,2.934.495,9.46,9.46,0,0,0,2.934-.495,1.755,1.755,0,0,1,.509-.079A8,8,0,0,1,28.3,27.23,13.744,13.744,0,0,1,17.788,32.121Z"/>
+        </svg></a></li>
+        
+    </nav>
+
+    </header>
+
+    <main>
+
+    <!-- Main Section -->
+    <section>
+        <!-- Works Article -->
+        <article class="works">
+            <h2>Saved works</h2>
+        </article>
+
+    </section>
+
+   
+<div id="savedArtworksContainer"></div>
+
+</main>
+
+<script>
+    let user = JSON.parse(sessionStorage.getItem('user'));
+    
+    if (user && user.username) {
+        console.log('User:', user); 
+        
+        const userSavedArtworks = JSON.parse(localStorage.getItem(`savedArtworks_${user.username}`)) || [];
+        const savedArtworksContainer = document.getElementById('savedArtworksContainer');
+    
+        // Display saved artworks on the page
+        userSavedArtworks.forEach(savedArtwork => {
+            const artworkElement = document.createElement('div');
+            artworkElement.innerHTML = `
+                <div class="saved-artwork-container">
+                    <img src="${savedArtwork.imageUrl}" alt="Saved Artwork">
+                    <h4>${savedArtwork.artistName}</h4>
+                </div>
+            `;
+            savedArtworksContainer.appendChild(artworkElement);
+        });
+    
+        // Update the account link
+        let accountLink = document.getElementById('accountLink');
+        accountLink.href = '#'; 
+        accountLink.innerHTML = user.username.toUpperCase();
+        let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        accountLink.style.color = randomColor;
+    
+    } else {
+        console.error('User not logged in or missing username');
+    }
+    
+    </script>
+    
+</body>
+</html>
+
